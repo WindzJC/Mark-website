@@ -1,26 +1,39 @@
-# Mark H. Brookshire — Thrown Out of Eden
+# Mark H. Brookshire — A Life in Reflections
 
-Complimentary website concept for author review, prepared by Astra Productions.
+Complimentary **private author website concept** created by Astra Productions for *Thrown Out of Eden: Rhymes of/and Reflection*.
 
-## Deploy to Cloudflare Pages
+## One idea made for this author
+
+The mirrors on Mark's published book cover are the organizing device for the page. Visitors select three reflective frames: **the hands** (his actual trades), **the city** (Dallas and his independently documented 1988 poem), and **the page** (his writing history and 2024 book). Industrial illustrations, catalog typography, and an archival exhibit are built around that story, rather than a generic author template.
+
+## Static Cloudflare Pages deployment
+
 - Repository: WindzJC/Mark-website
 - Production branch: main
 - Framework: None
-- Build command: leave blank
+- Build command: empty
 - Build output directory: /
+- Files: index.html and assets/official-cover.jpg
 
-This is static HTML: index.html plus assets/official-cover.jpg.
+No framework, build tools, or environment variables are required.
 
-## Review status
-**Not an approved, public author website.** The page carries a draft notice and noindex,nofollow metadata. Do not remove these until Mark approves.
+## Review-only restrictions
 
-- The official published cover is included for **review-use concept** from a book retailer. Confirm the publisher/author permits promotional use before production launch.
-- The portrait area is intentionally reserved. A clear, verified, approved author headshot is still needed; no stock photo or unverified social profile has been misrepresented as Mark.
-- The 1988 poem's text has NOT been reproduced. The museum section links to the public record and does not imply endorsement.
-- Request final approval of biography, copy, cover use, and retailer links before any client-facing permanent launch.
+**This is not an approved official author website.** The page retains a concept disclaimer and `noindex,nofollow`; do not remove until Mark has approved a public launch.
 
-## Research
-- Museum record: https://emuseum.jfk.org/objects/4432/poem-titled-a-crime-revisited
-- Book synopsis/publishing: https://www.readings.com.au/product/9781649794253/thrown-out-of-eden--mark-h-brookshire--2024--9781649794253
-- Published biography: https://www.hugendubel.de/de/taschenbuch/mark_h_brookshire-thrown_out_of_eden-47332653-produkt-details.html
-- Cover preview: https://www.24symbols.com/book/english/mark-h-brookshire/thrown-out-of-eden---rhymes-of-and-reflection?id=5569936
+- **Portrait:** no verified approved portrait has been found. The page contains a deliberate monogram / portrait slot, not a fabricated headshot.
+- **Cover:** included only for preview; secure author/publisher permission for permanent promotional use.
+- **Poems:** does not reproduce the poem `A Crime Revisited`, and does not claim it is part of `Thrown Out of Eden`.
+- **Museum:** no museum endorsement or affiliation is claimed. The museum section is based on its public catalog.
+- **Copy:** verify Mark's preferred biography, voice, and any use of excerpts with him before final launch.
+- **Retailer links:** point to third-party catalog listings; inventory and prices can change.
+
+## Source references
+- The Sixth Floor Museum archive: https://emuseum.jfk.org/objects/4432/poem-titled-a-crime-revisited
+- Published author biography: https://www.abebooks.de/9781649794253/Thrown-Out-Eden-Rhymes-ofand-1649794258/plp
+- Book listing: https://www.thriftbooks.com/w/thrown-out-of-eden-rhymes-ofand-reflection_mark-h-brookshire/51751963/
+- Hardback record: https://www.readings.com.au/product/9781649794253/thrown-out-of-eden--mark-h-brookshire--2024--9781649794253
+
+## Interaction and accessibility
+
+Accessible labeled buttons for the three mirrors, click-to-switch narrative panels with live-region announcements, keyboard-visible focus, responsive navigation, scroll progress, reduced-motion support, and self-contained illustrations.

@@ -1,33 +1,26 @@
-# Mark H. Brookshire — homepage concept
+# Mark H. Brookshire — Thrown Out of Eden
 
-Complimentary, author-review website concept for *Thrown Out of Eden: Rhymes of/and Reflection*, prepared by Astra Productions.
+Complimentary website concept for author review, prepared by Astra Productions.
 
 ## Deploy to Cloudflare Pages
+- Repository: WindzJC/Mark-website
+- Production branch: main
+- Framework: None
+- Build command: leave blank
+- Build output directory: /
 
-This is a static website. The repository root contains `index.html`. In Cloudflare Pages choose **Connect to Git**, select **WindzJC/Mark-website**, choose branch **main**, and configure:
+This is static HTML: index.html plus assets/official-cover.jpg.
 
-- Framework preset: **None**
-- Build command: **leave empty**
-- Build output directory: **/** (repository root)
+## Review status
+**Not an approved, public author website.** The page carries a draft notice and noindex,nofollow metadata. Do not remove these until Mark approves.
 
-No npm install, build step, or environment variables are required.
+- The official published cover is included for **review-use concept** from a book retailer. Confirm the publisher/author permits promotional use before production launch.
+- The portrait area is intentionally reserved. A clear, verified, approved author headshot is still needed; no stock photo or unverified social profile has been misrepresented as Mark.
+- The 1988 poem's text has NOT been reproduced. The museum section links to the public record and does not imply endorsement.
+- Request final approval of biography, copy, cover use, and retailer links before any client-facing permanent launch.
 
-## Preview restrictions
-
-This is **not an approved public author website**. The draft contains a `noindex, nofollow` meta tag and visible review-only notices. Keep them until the author approves the content and public launch. A publicly accessible preview URL is still accessible to anyone with the link.
-
-- The typographic cover in the hero is conceptual artwork, **not the published book cover**. Use an approved official cover before launch.
-- Biography wording, the Dealey Plaza context, and museum history should be reviewed by Mark.
-- Do not add poem text, photos, or other copyrighted assets without permission.
-- Retailer links are independent external listings and can change.
-- The museum is **not affiliated with** or endorsing this website.
-
-## Background references
-
-- Museum catalog: https://emuseum.jfk.org/objects/4432/poem-titled-a-crime-revisited
-- Book listing: https://www.readings.com.au/product/9781649794253/thrown-out-of-eden--mark-h-brookshire--2024--9781649794253
-- Author bio / paperback listing: https://www.hugendubel.de/de/taschenbuch/mark_h_brookshire-thrown_out_of_eden-47332653-produkt-details.html
-
-## Before a final launch
-
-Verify the author's preferred wording and book links; obtain the actual cover, photo, and any poem excerpts with approval; confirm contact details and domain; remove preview notices and `noindex` only once approved.
+## Research
+- Museum record: https://emuseum.jfk.org/objects/4432/poem-titled-a-crime-revisited
+- Book synopsis/publishing: https://www.readings.com.au/product/9781649794253/thrown-out-of-eden--mark-h-brookshire--2024--9781649794253
+- Published biography: https://www.hugendubel.de/de/taschenbuch/mark_h_brookshire-thrown_out_of_eden-47332653-produkt-details.html
+- Cover preview: https://www.24symbols.com/book/english/mark-h-brookshire/thrown-out-of-eden---rhymes-of-and-reflection?id=5569936

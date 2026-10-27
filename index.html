@@ -1,330 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="light" />
-  <meta name="robots" content="noindex, nofollow" />
-  <meta name="description" content="A literary homepage concept for Dallas poet Mark H. Brookshire, author of Thrown Out of Eden: Rhymes of/and Reflection." />
-  <meta property="og:title" content="Mark H. Brookshire — Literary Homepage Concept" />
-  <meta property="og:description" content="An editorial home for Thrown Out of Eden and the poet behind the work." />
-  <meta name="theme-color" content="#eae5d9" />
-  <title>Mark H. Brookshire — Poetry &amp; Reflection</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --paper:#eee9df; --paper-light:#f9f5ed; --ink:#272720; --muted:#706e62;
-      --line:#c9c2b4; --red:#823d39; --red-dark:#652d2b; --dark:#242922; --gold:#bc9b65;
-      --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
-      --sans:"DM Sans", Arial, sans-serif;
-      --edge:clamp(22px,5vw,100px);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
-    ::selection{background:#e0b4a7;color:#291e19}
-    a{color:inherit;text-decoration:none} a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:4px}
-    button{font:inherit}
-    .draft-strip{background:var(--ink);color:#f5eede;font-size:10px;letter-spacing:.155em;text-align:center;padding:11px 18px;text-transform:uppercase}
-    .site-header{background:var(--paper);border-bottom:1px solid var(--line);position:relative;z-index:10}
-    .header-inner{display:flex;align-items:center;justify-content:space-between;min-height:96px;padding:0 var(--edge);gap:25px}
-    .brand{display:flex;align-items:center;gap:13px;min-width:240px}
-    .brand-mark{height:39px;width:39px;border:1px solid #8f8a7e;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:20px;font-style:italic}
-    .brand-text{display:flex;flex-direction:column;font-size:12px;letter-spacing:.16em;font-weight:700;text-transform:uppercase;line-height:1.55}
-    .brand-text small{font-size:9px;color:var(--muted);letter-spacing:.28em;font-weight:500}
-    .nav-links{display:flex;align-items:center;gap:clamp(18px,2.5vw,45px)}
-    .nav-links a{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;transition:color .2s}
-    .nav-links a:hover{color:var(--red)}
-    .nav-links .header-cta{background:var(--red);color:white;padding:17px 21px;border:1px solid var(--red)}
-    .nav-links .header-cta:hover{background:var(--red-dark);color:white}
-    .menu-toggle{display:none;border:1px solid var(--line);background:transparent;padding:11px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
-    .hero{min-height:690px;overflow:hidden;position:relative;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(390px,.88fr);border-bottom:1px solid var(--line)}
-    .hero-copy{padding:clamp(72px,7.8vw,140px) 30px 78px var(--edge);position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center}
-    .eyebrow{display:flex;gap:13px;align-items:center;color:var(--red);font-size:11px;font-weight:700;letter-spacing:.205em;text-transform:uppercase}
-    .eyebrow::before{content:"";height:1px;width:33px;background:var(--red)}
-    .hero-title{font-family:var(--serif);font-weight:500;font-size:clamp(88px,10vw,174px);letter-spacing:-.065em;line-height:.73;margin:53px 0 27px;max-width:850px}
-    .hero-title span{display:block;white-space:nowrap}
-    .hero-title .italic{font-style:italic;color:var(--red);font-weight:400;margin-left:.31em}
-    .hero-subtitle{font-family:var(--serif);font-style:italic;font-size:clamp(26px,2.8vw,41px);color:#544f45;margin:0 0 31px;letter-spacing:-.01em}
-    .hero-desc{line-height:1.85;color:#5c5a50;max-width:485px;font-size:13px;margin:0 0 38px}
-    .hero-actions{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;justify-content:space-between;gap:35px;font-size:11px;text-transform:uppercase;letter-spacing:.155em;font-weight:700;padding:19px 24px;transition:background .2s,transform .2s}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{background:var(--red);color:#fff;border:1px solid var(--red)}
-    .btn-primary:hover{background:var(--red-dark)}
-    .btn-outline{border:1px solid #aaa397;color:var(--ink)}
-    .btn-outline:hover{background:var(--paper-light)}
-    .text-link{font-size:11px;letter-spacing:.115em;text-transform:uppercase;font-weight:700;border-bottom:1px solid #9d9689;padding:9px 0}
-    .text-link:hover{color:var(--red)}
-    .hero-stage{background:#d9d1c3;position:relative;min-height:650px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-    .hero-stage::before{content:"";position:absolute;inset:35px;border:1px solid rgba(255,255,255,.4)}
-    .hero-stage::after{content:"";position:absolute;width:580px;height:580px;border:1px solid rgba(83,78,66,.13);border-radius:50%;top:5%;left:22%;box-shadow:0 0 0 120px rgba(255,255,255,.04),0 0 0 235px rgba(255,255,255,.035)}
-    .stage-vertical{position:absolute;right:25px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;letter-spacing:.21em;color:rgba(67,61,52,.5);font-size:10px;text-transform:uppercase;z-index:3}
-    .book-volume{position:relative;z-index:2;width:clamp(260px,27vw,367px);aspect-ratio:.71;background:#333c35;transform:rotate(-7deg);box-shadow:12px 9px 0 #aaa79b,19px 11px 0 #eee9da,22px 15px 0 #a3a095,38px 42px 45px rgba(29,28,25,.32);border-left:8px solid #18231e;display:flex;align-items:center;flex-direction:column;padding:35px 23px 31px;justify-content:space-between;overflow:hidden}
-    .book-volume::before{content:"";position:absolute;inset:15px;border:1px solid rgba(213,195,156,.39);pointer-events:none}
-    .book-volume::after{content:"";position:absolute;width:480px;height:480px;border:1px solid rgba(223,193,140,.13);border-radius:50%;top:43%;left:35%;box-shadow:0 0 0 35px rgba(202,179,136,.04),0 0 0 75px rgba(202,179,136,.03)}
-    .book-small{font-size:9px;letter-spacing:.23em;text-transform:uppercase;color:#c4ba9f}
-    .book-line{width:38px;height:1px;background:var(--gold)}
-    .book-heading{text-align:center;color:#f1e9d6;font-family:var(--serif);font-size:clamp(55px,6vw,80px);line-height:.84;letter-spacing:-.025em;font-weight:400;position:relative;z-index:1}
-    .book-heading em{display:block;font-weight:400;color:#d6bfa1;margin:5px 0}
-    .book-rule{width:1px;height:74px;background:#c7a26e;position:relative}
-    .book-rule::before,.book-rule::after{content:"";position:absolute;left:-4px;border:1px solid #c7a26e;width:9px;height:9px;border-radius:50%}
-    .book-rule::before{top:0}.book-rule::after{bottom:0}
-    .stage-note{position:absolute;bottom:23px;left:27px;z-index:3;text-transform:uppercase;letter-spacing:.17em;font-size:9px;color:#6e675c}
-    .chapter-ticker{background:var(--dark);color:#dfd7c8;display:flex;justify-content:space-between;gap:20px;padding:27px var(--edge);font-size:10px;letter-spacing:.2em;text-transform:uppercase}
-    .chapter-ticker span:nth-child(2){font-family:var(--serif);font-size:20px;font-style:italic;text-transform:none;letter-spacing:.05em;margin-top:-5px;color:#c8ad85}
-    section{scroll-margin-top:40px}
-    .section-wrap{max-width:1530px;margin:auto;padding:120px var(--edge)}
-    .section-label{display:flex;align-items:center;gap:15px;font-size:10px;letter-spacing:.19em;text-transform:uppercase;color:var(--red);font-weight:700}
-    .section-label span{font-family:var(--serif);font-size:22px;letter-spacing:0;color:#88766c;font-style:italic;font-weight:500}
-    .section-label::after{content:"";width:60px;height:1px;background:#ae998e}
-    .section-title{font-family:var(--serif);font-size:clamp(56px,6.3vw,98px);line-height:.95;letter-spacing:-.043em;font-weight:400;margin:32px 0}
-    .section-title em{color:var(--red);font-weight:400}
-    .prose{font-size:14px;line-height:2.1;color:#5b594f}
-    .book-section{background:var(--paper-light)}
-    .book-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(60px,10vw,170px);align-items:start}
-    .book-intro .prose{max-width:550px}
-    .small-note{font-family:var(--serif);font-size:24px;color:#5d5a50;font-style:italic;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:27px 0;margin-top:35px;line-height:1.35}
-    .fact-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:45px;border-top:1px solid var(--line)}
-    .fact{padding:23px 10px 0 0;display:flex;flex-direction:column;gap:11px}
-    .fact strong{font-size:18px;font-family:var(--serif);font-weight:600}
-    .fact span{font-size:9px;letter-spacing:.15em;color:var(--muted);text-transform:uppercase}
-    .book-detail{background:#e8e0d4;padding:54px;position:relative;margin-top:50px;box-shadow:17px 17px 0 #e0d8cb}
-    .book-detail::before{content:"“";font-family:var(--serif);font-size:148px;line-height:1;position:absolute;left:36px;top:10px;color:#c3b2a0}
-    .book-detail blockquote{position:relative;z-index:1;margin:22px 0 30px;font-family:var(--serif);font-size:clamp(35px,3.6vw,55px);font-style:italic;line-height:1.13;letter-spacing:-.035em}
-    .book-detail small{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#84786c}
-    .buy-links{display:flex;align-items:stretch;gap:12px;flex-wrap:wrap;margin-top:37px}
-    .buy-links .btn{flex:1;min-width:205px}
-    .writer{background:var(--paper)}
-    .writer-grid{display:grid;grid-template-columns: minmax(300px,.82fr) minmax(0,1.18fr);gap:clamp(70px,9vw,160px);align-items:center}
-    .writer-art{height:590px;background:#dad1c3;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-    .writer-art:before{content:"";position:absolute;inset:17px;border:1px solid rgba(72,61,53,.21)}
-    .writer-art:after{content:"";position:absolute;left:-100px;top:-140px;width:610px;height:610px;border:1px solid rgba(121,95,78,.17);border-radius:50%;box-shadow:0 0 0 55px rgba(120,96,77,.06),0 0 0 115px rgba(120,96,77,.04)}
-    .writer-art-inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;color:#7d3d39}
-    .writer-art-mark{font-family:var(--serif);font-size:clamp(155px,22vw,320px);font-style:italic;line-height:.8;letter-spacing:-.13em;padding-right:.1em}
-    .writer-art-line{height:1px;width:94px;background:#9b6b61;margin:40px 0 27px}
-    .writer-art-inner span:last-child{font-size:10px;letter-spacing:.27em;text-transform:uppercase;color:#695d51}
-    .writer .section-title{margin-bottom:29px}
-    .writer .prose{max-width:620px}
-    .writer-quote{font-family:var(--serif);font-size:clamp(24px,2.4vw,36px);font-style:italic;color:var(--red);margin:29px 0 0}
-    .writer-bio-note{margin-top:35px;padding-top:23px;border-top:1px solid var(--line);display:flex;gap:18px;align-items:flex-start;max-width:610px}
-    .writer-bio-note strong{font-family:var(--serif);font-size:29px;font-weight:400;color:var(--red)}
-    .writer-bio-note p{font-size:12px;line-height:1.8;color:#736f64;margin:3px 0}
-    .archive{background:#272b25;color:#eee5d6;position:relative;overflow:hidden}
-    .archive::after{content:"1988";font-size:min(29vw,470px);position:absolute;bottom:-120px;right:-30px;font-family:var(--serif);color:rgba(231,226,210,.045);pointer-events:none}
-    .archive .section-label{color:#c4a37c}.archive .section-label span{color:#9e8a75}.archive .section-label:after{background:#7b6a59}
-    .archive-grid{display:grid;grid-template-columns:.98fr 1.02fr;gap:clamp(55px,7.8vw,120px);align-items:center;position:relative;z-index:1}
-    .archive .section-title{font-size:clamp(58px,6.5vw,105px);color:#fff6e8}
-    .archive .section-title em{color:#c7a67e}
-    .archive-copy{font-size:14px;color:#c7c5b8;line-height:2.1;max-width:620px}
-    .museum-link{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;border-bottom:1px solid #a6967f;color:#f2dcb6;padding:17px 0;margin-top:22px;text-transform:uppercase;letter-spacing:.155em;font-weight:700;font-size:10px}
-    .museum-link:hover{color:#fff}
-    .timeline{position:relative;padding-left:49px;margin-top:28px;border-left:1px solid #786f60}
-    .timeline-item{position:relative;margin:0 0 49px}
-    .timeline-item:last-child{margin-bottom:0}
-    .timeline-item:before{content:"";position:absolute;top:10px;left:-54px;width:9px;height:9px;border:1px solid #b49b78;background:#272b25;border-radius:50%}
-    .timeline-year{font-family:var(--serif);font-size:52px;line-height:1;font-style:italic;color:#d6b48b;margin-bottom:9px}
-    .timeline-title{font-size:14px;font-weight:700;letter-spacing:.025em;color:#f8eee0;margin-bottom:10px}
-    .timeline-desc{font-size:12px;line-height:1.8;color:#bab7ac;max-width:420px}
-    .archive-footnote{display:flex;gap:18px;align-items:flex-start;border-top:1px solid #55574d;padding-top:27px;margin-top:80px;position:relative;z-index:1}
-    .archive-footnote span{font-family:var(--serif);font-size:37px;color:#a98e6d}
-    .archive-footnote p{font-size:11px;line-height:1.8;color:#aaa99b;margin:0;max-width:890px}
-    .closing{background:var(--paper-light);text-align:center;padding:120px var(--edge) 132px}
-    .closing .section-label{justify-content:center}.closing .section-label::before{content:"";width:60px;height:1px;background:#ae998e}
-    .closing h2{font-family:var(--serif);font-size:clamp(58px,8vw,124px);font-weight:400;line-height:.9;letter-spacing:-.055em;margin:33px auto;max-width:1100px}
-    .closing h2 em{color:var(--red)}
-    .closing p{font-family:var(--serif);font-size:25px;font-style:italic;color:#696557;max-width:530px;margin:0 auto 35px;line-height:1.4}
-    .closing-links{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:16px}
-    .site-footer{background:#22251f;color:#cbc5b9;padding:65px var(--edge) 31px}
-    .footer-grid{display:flex;justify-content:space-between;align-items:start;gap:40px;flex-wrap:wrap;padding-bottom:66px}
-    .footer-name{font-family:var(--serif);font-size:36px;font-weight:500;line-height:1;margin-bottom:10px}
-    .footer-sub{font-size:10px;text-transform:uppercase;letter-spacing:.19em;color:#a8a190}
-    .footer-links{display:flex;gap:28px;flex-wrap:wrap;font-size:11px;text-transform:uppercase;letter-spacing:.1em}
-    .footer-links a:hover{color:white}
-    .footer-bottom{border-top:1px solid #4a4b42;padding-top:24px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:10px;color:#9d9e90;line-height:1.8}
-    .footer-bottom a{text-decoration:underline;text-underline-offset:3px}
-    [data-reveal]{opacity:0;transform:translateY(20px);transition:opacity .8s,transform .8s}
-    [data-reveal].in-view{opacity:1;transform:none}
-    @media(max-width:1120px){
-      .nav-links{gap:20px}.brand{min-width:190px}.hero-title{font-size:clamp(84px,9.6vw,125px)}
-      .hero{grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr)}.book-volume{width:295px}
-      .book-grid,.writer-grid,.archive-grid{gap:65px}
-      .book-detail{padding:37px}
-    }
-    @media(max-width:880px){
-      .header-inner{min-height:77px}.menu-toggle{display:block}
-      .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper-light);padding:23px var(--edge) 31px;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;box-shadow:0 15px 18px rgba(30,28,25,.08)}
-      .nav-links.open{display:flex}.nav-links a{padding:14px 0}.nav-links .header-cta{margin-top:12px;text-align:center;padding:16px}
-      .hero{grid-template-columns:1fr}.hero-copy{padding:85px var(--edge) 75px}
-      .hero-title{font-size:clamp(91px,15vw,150px)}.hero-stage{min-height:565px}
-      .stage-vertical{right:28px}.book-volume{width:310px}
-      .book-grid,.writer-grid,.archive-grid{grid-template-columns:1fr}.section-wrap{padding:85px var(--edge)}
-      .book-detail{margin-top:0}.writer-art{height:420px;max-width:590px}.writer-art-mark{font-size:270px}
-      .archive-grid{gap:75px}.archive-footnote{margin-top:67px}
-      .chapter-ticker span:nth-child(3){display:none}
-    }
-    @media(max-width:540px){
-      .draft-strip{font-size:8px;letter-spacing:.09em}.brand-text{font-size:10px}.brand{gap:9px;min-width:0}.brand-mark{width:34px;height:34px;font-size:18px}
-      .hero-title{font-size:clamp(65px,18vw,100px);margin:38px 0 20px}
-      .hero-copy{padding-top:73px;padding-bottom:70px}.hero-subtitle{font-size:27px}.hero-desc{font-size:12px}
-      .hero-stage{min-height:480px}.book-volume{width:245px}.book-heading{font-size:58px}.book-rule{height:50px}
-      .stage-vertical{right:16px;font-size:8px}.stage-note{bottom:12px;left:14px;font-size:8px}
-      .chapter-ticker{font-size:9px}.chapter-ticker span:nth-child(2){font-size:17px}
-      .section-wrap{padding-top:75px;padding-bottom:75px}.section-title{font-size:59px}
-      .book-detail{padding:32px 28px;box-shadow:9px 9px 0 #e0d8cb}
-      .book-detail blockquote{font-size:37px}.fact strong{font-size:16px}
-      .buy-links{flex-direction:column}.writer-art{height:370px}.writer-art-mark{font-size:220px}
-      .timeline{padding-left:30px}.timeline-item:before{left:-35px}
-      .archive .section-title{font-size:65px}.archive-footnote{margin-top:60px}
-      .closing{padding:83px var(--edge) 90px}.closing h2{font-size:60px}.closing p{font-size:22px}
-      .footer-name{font-size:30px}.site-footer{padding-top:55px}
-    }
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}[data-reveal]{opacity:1;transform:none}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#211c2c">
+<meta name="description" content="Discover the life and poetry of Dallas writer Mark H. Brookshire, author of Thrown Out of Eden: Rhymes of/and Reflection.">
+<meta property="og:title" content="Mark H. Brookshire — Thrown Out of Eden">
+<meta property="og:description" content="A working life. A poet's eye. One city that never stopped asking questions.">
+<title>Mark H. Brookshire | Thrown Out of Eden</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--night:#211c2c;--wine:#4a263b;--red:#af493d;--red2:#e7856b;--page:#f3e9da;--bone:#fffaf0;--line:#cdbdaa;--ink:#312c35;--muted:#776b72;--gold:#d5b37c;--sage:#799391;--serif:'DM Serif Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif;--mono:'Space Mono',monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--page);color:var(--ink);font-family:var(--sans);overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}img{display:block;max-width:100%}a:focus-visible,button:focus-visible{outline:2px solid var(--red2);outline-offset:5px}::selection{background:#f8a980;color:var(--night)}
+.review{background:#1b1722;color:#e5d9c8;display:flex;justify-content:center;align-items:center;gap:10px;font:9px var(--mono);letter-spacing:.07em;line-height:1.6;padding:8px 20px;text-align:center}.review i{width:6px;height:6px;border-radius:50%;background:#de997f;display:inline-block;flex:0 0 auto}
+.topbar{height:85px;padding:0 clamp(22px,5vw,92px);display:flex;align-items:center;justify-content:space-between;background:#292230;color:#f7eadd;position:relative;z-index:50;border-bottom:1px solid rgba(255,255,255,.16)}.logo{display:flex;align-items:center;gap:15px}.sig{font:italic 38px var(--serif);line-height:1;color:#eda27a}.logo-name{font:700 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;line-height:1.45}.logo-name em{display:block;font:400 10px var(--mono);letter-spacing:.05em;color:#cbb8ae;text-transform:none}.links{display:flex;align-items:center;gap:clamp(20px,3vw,50px)}.links a{font:10px var(--mono);letter-spacing:.06em;color:#e3cfc5;transition:color .2s}.links a:hover{color:#fbb98e}.links a:last-child{color:var(--night);background:#f7ead8;padding:14px 20px;font-weight:700}.mobile-menu{display:none;border:1px solid #8b7b85;background:transparent;color:white;padding:10px 14px;font:11px var(--mono);cursor:pointer}
+.hero{background:var(--night);color:#f8edde;position:relative;min-height:760px;overflow:hidden}.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 87% 30%,rgba(192,100,86,.17),transparent 46%),linear-gradient(150deg,transparent 65%,rgba(196,121,130,.08));pointer-events:none}.hero::after{content:"";width:760px;height:760px;border:1px solid rgba(255,255,255,.06);border-radius:50%;position:absolute;left:-350px;bottom:-520px;box-shadow:0 0 0 90px rgba(255,255,255,.015),0 0 0 190px rgba(255,255,255,.015);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(360px,.9fr);min-height:760px;max-width:1600px;margin:auto}.hero-copy{padding:clamp(75px,8vw,132px) 15px 100px clamp(30px,7vw,120px);position:relative;z-index:3}.overline{display:flex;align-items:center;gap:15px;font:10px var(--mono);text-transform:uppercase;letter-spacing:.14em;color:#e5b390}.overline::before{content:"";height:1px;width:37px;background:#e5b390}.hero h1{font:400 clamp(78px,9.8vw,168px)/.81 var(--serif);letter-spacing:-.062em;margin:60px 0 0;max-width:850px}.hero h1 span{display:block}.hero h1 em{font-weight:400;color:#e8957b;white-space:nowrap}.hero .sub{font:italic clamp(26px,2.8vw,44px) var(--serif);color:#d4a9a0;margin:26px 0 27px}.hero .dek{max-width:450px;color:#c8bcb8;font-size:14px;line-height:1.95;margin:0 0 36px}.actions{display:flex;gap:24px;align-items:center;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;padding:17px 21px;border:1px solid transparent;background:#e9937c;color:#251b24;font:700 10px var(--mono);text-transform:uppercase;letter-spacing:.07em;transition:transform .2s,background .2s}.button:hover{transform:translateY(-3px);background:#f7b08c}.underlink{border-bottom:1px solid currentColor;padding:10px 0;color:#fff0e3;font:10px var(--mono);letter-spacing:.05em}.underlink:hover{color:#f6b192}
+.hero-art{position:relative;display:flex;justify-content:center;align-items:center;min-height:690px;padding:90px 50px 85px;isolation:isolate}.hero-art:before{content:"";position:absolute;width:390px;height:550px;border-radius:200px 200px 5px 5px;border:11px double #9e7775;outline:1px solid #c6a685;background:linear-gradient(90deg,rgba(255,255,255,.02),rgba(255,255,255,.12),rgba(255,255,255,.025));transform:translate(42px,5px);box-shadow:inset 0 0 0 11px #392b3b,0 40px 90px #14101a;z-index:-1}.hero-art:after{content:"";position:absolute;height:70px;width:460px;background:radial-gradient(ellipse,rgba(226,136,115,.3),transparent 66%);bottom:35px;z-index:-1}.cover{width:min(70%,355px);height:auto;filter:drop-shadow(18px 24px 17px rgba(0,0,0,.48));transform:rotate(-5deg);transition:transform .5s;box-shadow:-10px 0 0 #b98882,-14px 0 0 #332837}.cover:hover{transform:rotate(-2deg) translateY(-12px)}.vertical{position:absolute;right:24px;top:50%;writing-mode:vertical-rl;transform:translateY(-50%);font:9px var(--mono);color:#bb978f;letter-spacing:.19em}.cover-tag{position:absolute;left:3%;bottom:32px;font:9px var(--mono);color:#c19c8f;text-transform:uppercase;letter-spacing:.09em}.hero-scroll{position:absolute;left:clamp(30px,7vw,120px);bottom:22px;font:9px var(--mono);letter-spacing:.1em;color:#b3a5a8}
+.chapter{display:grid;grid-template-columns:1fr 1fr 1fr;background:#a34640;color:#fff4e6;padding:25px clamp(25px,5vw,95px);gap:20px;font:10px var(--mono);text-transform:uppercase;letter-spacing:.06em}.chapter div:nth-child(2){text-align:center}.chapter div:nth-child(3){text-align:right}
+.section{padding:clamp(80px,9vw,145px) clamp(25px,7vw,120px)}.narrow{max-width:1400px;margin:auto}.eyebrow{font:10px var(--mono);letter-spacing:.17em;color:#a54c46;text-transform:uppercase}.eyebrow b{display:inline-block;margin-right:13px;font-size:13px}.heading{font:400 clamp(54px,6.6vw,112px)/.94 var(--serif);letter-spacing:-.043em;margin:22px 0 30px}.heading em{color:#ac5146}.bodycopy{font-size:15px;line-height:2;color:#554952;max-width:650px}.bodycopy p{margin:0 0 19px}
+.opening{background:#f6ece0;position:relative}.opening .narrow{display:grid;grid-template-columns:.45fr 1fr;gap:clamp(40px,10vw,170px);align-items:start}.opening .cap{border-top:1px solid #bea898;padding-top:21px;font:11px var(--mono);line-height:1.95;color:#9d675d;text-transform:uppercase;letter-spacing:.03em}.opening blockquote{font:italic clamp(32px,4.6vw,71px)/1.18 var(--serif);margin:0;color:#392c36;max-width:960px}.opening blockquote span{color:#ae5047}.opening .source{font:10px var(--mono);color:#8b746c;margin-top:35px}
+.roots{background:#ebe0d1;position:relative}.roots .narrow{display:grid;grid-template-columns:minmax(300px,.87fr) minmax(0,1.13fr);gap:clamp(50px,9vw,130px)}.portrait-wrap{position:relative;max-width:500px}.portrait{position:relative;min-height:590px;display:flex;align-items:center;justify-content:center;flex-direction:column;border:13px solid #8d5263;outline:1px solid #ba9587;outline-offset:9px;background:linear-gradient(145deg,#8e6971 0%,#493b4c 50%,#292534 100%);overflow:hidden}.portrait:before{content:"";position:absolute;width:300px;height:440px;top:35px;border:1px solid rgba(255,227,206,.18);border-radius:160px 160px 0 0;box-shadow:0 0 0 25px rgba(255,255,255,.025),0 0 0 50px rgba(255,255,255,.016)}.portrait:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 33px,rgba(255,255,255,.018) 33px 34px);pointer-events:none}.portrait .initials{font:italic 120px var(--serif);color:#ebaf9f;z-index:1;letter-spacing:-.08em;margin-right:20px}.portrait .expect{z-index:1;max-width:245px;text-align:center;font:10px/1.8 var(--mono);color:#f3d4c8;text-transform:uppercase;letter-spacing:.08em}.portrait-caption{display:flex;justify-content:space-between;gap:12px;margin-top:22px;padding-top:14px;border-top:1px solid #b3a69a;font:10px var(--mono);color:#795c64}.portrait-stamp{position:absolute;right:-20px;top:23px;padding:12px 15px;transform:rotate(8deg);background:#ead4b4;color:#7d4146;border:1px solid #a47c66;font:700 9px var(--mono);z-index:2}.roots-text .heading{max-width:730px}.roots-text .bodycopy{max-width:640px}.jobline{margin-top:40px;padding-top:25px;border-top:1px solid #c6b6a8}.jobline .lab{font:10px var(--mono);letter-spacing:.15em;text-transform:uppercase;color:#8e706d;margin-bottom:18px}.jobs{display:flex;flex-wrap:wrap;gap:8px}.jobs span{border:1px solid #bea99a;padding:11px 13px;font:10px var(--mono);color:#57434b;background:rgba(255,255,255,.2)}.roots .smallhint{font-size:11px;line-height:1.65;color:#917a78;margin-top:28px}
+.archive{background:#222736;color:#e6e6df;position:relative;overflow:hidden}.archive:before{content:"1988";position:absolute;top:-80px;right:-5vw;font:400 clamp(210px,27vw,520px) var(--serif);color:rgba(255,255,255,.027);pointer-events:none}.archive .eyebrow{color:#e3a49c}.archive .heading em{color:#e39c8a}.archive .bodycopy{color:#b9c3c5}.archive-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(60px,8vw,140px);align-items:center;position:relative}.museum-link{display:inline-flex;border-bottom:1px solid #ccad9d;padding:15px 0;margin-top:24px;gap:34px;font:10px var(--mono);text-transform:uppercase;letter-spacing:.07em;color:#f5c7aa}.museum-link:hover{color:white}.arch-sheet{position:relative;margin-left:auto;width:min(100%,470px);background:#eaddc9;color:#342c31;padding:35px clamp(25px,3.3vw,55px) 30px;box-shadow:18px 24px 0 #4a4453,26px 35px 35px rgba(0,0,0,.2);transform:rotate(2.5deg)}.arch-sheet:before{content:"";position:absolute;inset:13px;border:1px solid #c5ad96;pointer-events:none}.arch-sheet .tag{font:9px var(--mono);text-transform:uppercase;letter-spacing:.16em;color:#9e655e}.arch-sheet .arch-title{font:italic clamp(43px,4vw,68px)/1 var(--serif);margin:46px 0 18px;color:#352b37}.arch-sheet p{font:13px/1.8 var(--serif);margin:0;color:#5b4a4e}.arch-sheet .line{border-top:1px solid #b9a897;margin:50px 0 18px}.arch-sheet .arch-bottom{display:flex;justify-content:space-between;gap:12px;font:9px var(--mono);color:#77615e}.museum-facts{display:flex;gap:35px;margin-top:45px;padding-top:27px;border-top:1px solid #54606b;flex-wrap:wrap}.museum-facts strong{display:block;font:italic 37px var(--serif);color:#e4a79b}.museum-facts span{font:10px var(--mono);color:#b8b8bc}
+.reflect{background:#c16e64;color:#2d1d2a;overflow:hidden}.reflect .narrow{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}.reflect .eyebrow{color:#542738}.reflect .heading{font-size:clamp(60px,7vw,122px)}.reflect .heading em{color:#fff1d4}.reflect .bodycopy{color:#4a343b}.mirror-visual{position:relative;display:grid;place-items:center;min-height:550px}.mirror-visual .mirror{height:470px;width:320px;border:16px ridge #dbb77e;border-radius:48% 48% 5px 5px;box-shadow:inset 0 0 0 6px #6c453e,0 30px 35px rgba(66,29,38,.19);background:linear-gradient(135deg,#f8c3aa 5%,#a95d68 47%,#6b3c51 100%);position:relative;display:flex;align-items:center;justify-content:center}.mirror .mirror-word{font:italic 66px/1 var(--serif);color:#fff1e6;transform:rotate(-7deg);text-align:center;text-shadow:0 8px 20px rgba(28,18,31,.25)}.mirror-visual .orbit{position:absolute;font:10px var(--mono);letter-spacing:.1em;color:#4d2b3b;bottom:25px}.reflect-quote{border-left:3px solid #e7bfa3;margin-top:30px;padding-left:22px;font:italic 28px/1.3 var(--serif);color:#fff8e9;max-width:550px}
+.bookpanel{background:#f7eee4}.bookpanel .narrow{display:grid;grid-template-columns:minmax(310px,.9fr) 1.1fr;gap:clamp(55px,9vw,160px);align-items:center}.book-figure{background:#e5d3c6;padding:70px 75px;position:relative;min-height:560px;display:flex;justify-content:center;align-items:center}.book-figure:before{content:"";position:absolute;inset:25px;border:1px solid #c6aa9d}.book-figure img{width:min(100%,295px);transform:rotate(3deg);box-shadow:14px 18px 0 #ab847d,21px 29px 35px #88706a88}.book-sticker{position:absolute;top:20px;right:20px;padding:11px 12px;font:9px var(--mono);background:#3a2637;color:white;z-index:1}.bookpanel .heading{max-width:710px}.book-data{display:flex;gap:25px;flex-wrap:wrap;margin-top:35px;padding-top:24px;border-top:1px solid #d3bfae}.book-data div{min-width:100px}.book-data strong{display:block;font:italic 28px var(--serif);color:#85493e}.book-data span{font:10px var(--mono);color:#776c6b}.retail{display:flex;gap:13px;flex-wrap:wrap;margin-top:35px}.retail .button{background:#a94743;color:#fff6e9}.retail .button:hover{background:#863631}.outline-button{border:1px solid #9e8b81;padding:17px 20px;font:700 10px var(--mono);text-transform:uppercase;letter-spacing:.06em}.outline-button:hover{background:#eee0d1}
+.ending{background:#271f2f;color:#f8eddf;text-align:center;padding:clamp(90px,11vw,165px) 25px}.ending .eyebrow{color:#f0ac97}.ending h2{font:400 clamp(58px,8vw,135px)/.92 var(--serif);letter-spacing:-.055em;margin:29px auto 32px;max-width:1050px}.ending h2 em{color:#e2a78c}.ending p{font:italic 23px/1.5 var(--serif);color:#d0bdbb;margin:0 auto 42px;max-width:570px}.ending .button{margin:auto}.footer{background:#17151e;color:#bdb4b9;padding:40px clamp(25px,7vw,120px)}.footer .row{display:flex;justify-content:space-between;align-items:center;gap:25px;flex-wrap:wrap}.footer .name{font:italic 32px var(--serif);color:#fff2df}.footer p{font:10px/1.8 var(--mono);max-width:620px}.footer a{color:#f3c3b1;text-decoration:underline}
+[data-enter]{opacity:0;transform:translateY(28px);transition:opacity .75s,transform .75s}[data-enter].visible{opacity:1;transform:none}
+@media(max-width:1000px){.hero h1{font-size:clamp(82px,10vw,115px)}.hero-grid{grid-template-columns:1fr 420px}.hero-art{padding:65px 25px}.hero-art:before{width:340px;height:480px}.opening .narrow,.roots .narrow,.reflect .narrow,.bookpanel .narrow{gap:50px}}
+@media(max-width:800px){.topbar{height:74px}.mobile-menu{display:block}.links{display:none;position:absolute;top:100%;left:0;right:0;padding:14px 25px 25px;background:#292230;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid #655161}.links.active{display:flex}.links a{padding:14px 0}.links a:last-child{text-align:center;margin-top:12px}.hero-grid,.opening .narrow,.roots .narrow,.archive-grid,.reflect .narrow,.bookpanel .narrow{grid-template-columns:1fr}.hero-grid{min-height:0}.hero-copy{padding:76px 32px 72px}.hero h1{font-size:clamp(88px,14vw,145px)}.hero-art{min-height:620px}.hero-art:before{width:380px;height:520px}.hero-scroll{display:none}.cover-tag{left:35px}.section{padding:90px 32px}.opening .narrow{gap:35px}.roots .portrait-wrap{order:2;margin:auto;width:100%}.roots .roots-text{order:1}.portrait{min-height:510px}.arch-sheet{margin:30px auto 0}.reflect .mirror-visual{min-height:540px}.book-figure{max-width:580px}.chapter{grid-template-columns:1fr 1fr}.chapter div:nth-child(3){display:none}}
+@media(max-width:500px){.topbar{padding:0 22px}.logo{gap:9px}.sig{font-size:31px}.logo-name{font-size:10px}.logo-name em{font-size:8px}.hero-copy{padding:65px 24px 65px}.hero h1{font-size:clamp(73px,17vw,98px);margin-top:44px}.hero .sub{font-size:27px}.hero .dek{font-size:13px}.hero-art{min-height:505px;padding:35px 26px 45px}.hero-art:before{width:280px;height:420px;transform:translate(15px,0)}.cover{width:min(68%,258px)}.vertical{right:11px;font-size:8px}.cover-tag{font-size:8px;left:18px}.chapter{padding:21px 24px;font-size:8px}.section{padding:75px 24px}.heading{font-size:clamp(56px,12vw,77px)}.bodycopy{font-size:14px}.opening blockquote{font-size:38px}.portrait{min-height:390px}.portrait .initials{font-size:92px}.portrait-stamp{right:-12px}.arch-sheet{padding:28px 27px}.arch-sheet .arch-title{font-size:47px}.museum-facts{gap:25px}.mirror-visual{min-height:460px!important}.mirror-visual .mirror{width:250px;height:365px}.mirror .mirror-word{font-size:56px}.reflect-quote{font-size:24px}.book-figure{min-height:450px;padding:50px 35px}.book-figure img{max-width:225px}.ending{padding:87px 24px}.ending h2{font-size:68px}.ending p{font-size:22px}.review{font-size:8px}.actions{gap:14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}[data-enter]{opacity:1;transform:none}}
+</style>
 </head>
 <body>
-  <div class="draft-strip">Complimentary author website concept &nbsp; · &nbsp; For Mark's private review &nbsp; · &nbsp; Not an official live website</div>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="#top" aria-label="Mark H. Brookshire homepage">
-        <span class="brand-mark" aria-hidden="true">M.</span>
-        <span class="brand-text">Mark H. Brookshire <small>Poet &amp; writer</small></span>
-      </a>
-      <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button>
-      <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
-        <a href="#the-book">The collection</a>
-        <a href="#the-poet">The poet</a>
-        <a href="#the-archive">The archive</a>
-        <a class="header-cta" href="#get-the-book">Explore the book &nbsp; ↗</a>
-      </nav>
-    </div>
-  </header>
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <div class="eyebrow">A poet's life, in his own words</div>
-        <h1 class="hero-title" id="hero-title"><span>Thrown</span><span>Out <i class="italic">of</i></span><span>Eden.</span></h1>
-        <p class="hero-subtitle">Rhymes of/and Reflection</p>
-        <p class="hero-desc">Some observations are too important to leave unspoken. In this collection, Dallas writer Mark H. Brookshire turns lived experience, conviction, memory, and reflection into poetry that asks to be heard.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#the-book">Discover the collection <span aria-hidden="true">↗</span></a>
-          <a class="text-link" href="#the-poet">Meet the writer <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-      <div class="hero-stage" aria-label="Original typographic concept representing the book, not its published cover">
-        <div class="book-volume" role="img" aria-label="Conceptual book artwork featuring the words Thrown Out of Eden by Mark H. Brookshire. This is not the official published book cover.">
-          <div class="book-small">Mark H. Brookshire</div>
-          <div class="book-line"></div>
-          <div class="book-heading">Thrown<br>Out <em>of</em>Eden</div>
-          <div class="book-rule" aria-hidden="true"></div>
-          <div class="book-small">Rhymes of/and Reflection</div>
-        </div>
-        <div class="stage-vertical">Verse / history / remembrance</div>
-        <div class="stage-note">Typographic concept • official cover to be added</div>
-      </div>
-    </section>
-    <div class="chapter-ticker" aria-label="Section divider">
-      <span>Dallas, Texas</span><span>“A poet's voice must never be stilled.”</span><span>Est. in memory · made in words</span>
-    </div>
-    <section class="book-section" id="the-book" aria-labelledby="book-title">
-      <div class="section-wrap book-grid">
-        <div class="book-intro" data-reveal>
-          <div class="section-label"><span>01</span> The collection</div>
-          <h2 class="section-title" id="book-title">Poetry with<br><em>something to say.</em></h2>
-          <p class="prose"><em>Thrown Out of Eden: Rhymes of/and Reflection</em> is a collection shaped by a writer who believes poetry can do more than decorate a page. It can confront a difficult memory, question an easy assumption, or give a feeling its proper name.</p>
-          <p class="prose">The book moves between humanity, imagination, and social commentary—inviting readers to take their time, follow the reflections, and bring their own experiences to the words.</p>
-          <div class="fact-grid" aria-label="Book publication facts">
-            <div class="fact"><strong>2024</strong><span>Published</span></div>
-            <div class="fact"><strong>80 pages</strong><span>Poetry collection</span></div>
-            <div class="fact"><strong>Austin Macauley</strong><span>Publisher</span></div>
-          </div>
-        </div>
-        <div data-reveal>
-          <div class="book-detail">
-            <blockquote>“Poetry is the soul's melody.”</blockquote>
-            <small>From the publisher's description of Thrown Out of Eden</small>
-          </div>
-          <p class="small-note">For readers who want more than an answer—words that leave room for reflection.</p>
-          <div class="buy-links" id="get-the-book">
-            <a class="btn btn-primary" href="https://www.thriftbooks.com/w/thrown-out-of-eden-rhymes-ofand-reflection_mark-h-brookshire/51751963/" target="_blank" rel="noopener noreferrer">View paperback <span aria-hidden="true">↗</span></a>
-            <a class="btn btn-outline" href="https://www.readings.com.au/product/9781649794253/thrown-out-of-eden--mark-h-brookshire--2024--9781649794253" target="_blank" rel="noopener noreferrer">View hardback <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="writer" id="the-poet" aria-labelledby="writer-title">
-      <div class="section-wrap writer-grid">
-        <div class="writer-art" aria-label="Decorative monogram for Mark H. Brookshire" data-reveal>
-          <div class="writer-art-inner"><span class="writer-art-mark">M</span><span class="writer-art-line"></span><span>Written from life</span></div>
-        </div>
-        <div data-reveal>
-          <div class="section-label"><span>02</span> The poet</div>
-          <h2 class="section-title" id="writer-title">A working life.<br><em>A writer's eye.</em></h2>
-          <p class="prose">Born in Dallas and raised in nearby Farmers Branch, Mark H. Brookshire followed a path that did not begin in a literary salon. His published biography recalls years spent in different lines of work—from an oil-rig deck to painting and construction, and work as a cable technician.</p>
-          <p class="prose">Through those experiences, writing remained part of his life. An early college poetry-contest win was one sign of a voice that would keep finding its way onto the page.</p>
-          <p class="writer-quote">There is nothing ornamental about a life fully observed.</p>
-          <div class="writer-bio-note"><strong>✳</strong><p>This section is based on Mark's published author biography. A fuller first-person story or portrait can be added with his approval.</p></div>
-        </div>
-      </div>
-    </section>
-    <section class="archive" id="the-archive" aria-labelledby="archive-title">
-      <div class="section-wrap">
-        <div class="archive-grid">
-          <div data-reveal>
-            <div class="section-label"><span>03</span> A poem in the archive</div>
-            <h2 class="section-title" id="archive-title">A Crime<br><em>Revisited.</em></h2>
-            <p class="archive-copy">Long before <em>Thrown Out of Eden</em>, Mark wrote about the city that raised him. His 1988 poem <em>“A Crime Revisited”</em> reflected on Dallas and the lasting shadow of President John F. Kennedy's assassination.</p>
-            <p class="archive-copy">The poem now has a documented place in the collection of The Sixth Floor Museum at Dealey Plaza—a remarkable intersection of personal voice and public memory.</p>
-            <a class="museum-link" href="https://emuseum.jfk.org/objects/4432/poem-titled-a-crime-revisited" target="_blank" rel="noopener noreferrer">See the museum's catalog record <span aria-hidden="true">↗</span></a>
-          </div>
-          <div class="timeline" aria-label="Documented milestones" data-reveal>
-            <div class="timeline-item">
-              <div class="timeline-year">1988</div>
-              <div class="timeline-title">The poem is written</div>
-              <div class="timeline-desc">“A Crime Revisited” considers Dallas's response to the assassination and the weight of the decades that followed.</div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-year">2005</div>
-              <div class="timeline-title">A place in an exhibition</div>
-              <div class="timeline-desc">A copy was displayed on the museum's seventh floor during an installation supporting the traveling exhibition <em>True Colors</em>.</div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-year">2021</div>
-              <div class="timeline-title">His story, in his voice</div>
-              <div class="timeline-desc">Mark recorded an oral history with the museum on January 22.</div>
-            </div>
-          </div>
-        </div>
-        <div class="archive-footnote"><span aria-hidden="true">✳</span><p>The historical details above are drawn from The Sixth Floor Museum's published collection record. This independent author website concept is not affiliated with or endorsed by the museum. The poem itself is not reproduced here; an excerpt could be considered only with Mark's permission.</p></div>
-      </div>
-    </section>
-    <section class="closing" aria-labelledby="closing-title">
-      <div class="section-label"><span>04</span> Continue the reading</div>
-      <h2 id="closing-title">A book is a beginning.<br><em>Reflection continues.</em></h2>
-      <p>Read the collection. Meet the poet behind it. Carry a few words with you.</p>
-      <div class="closing-links">
-        <a class="btn btn-primary" href="https://www.thriftbooks.com/w/thrown-out-of-eden-rhymes-ofand-reflection_mark-h-brookshire/51751963/" target="_blank" rel="noopener noreferrer">Discover Thrown Out of Eden <span aria-hidden="true">↗</span></a>
-        <a class="btn btn-outline" href="#top">Return to the beginning <span aria-hidden="true">↑</span></a>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <div class="footer-grid">
-      <div><div class="footer-name">Mark H. Brookshire</div><div class="footer-sub">Poet · Dallas, Texas</div></div>
-      <div class="footer-links"><a href="#the-book">The collection</a><a href="#the-poet">The poet</a><a href="#the-archive">The archive</a><a href="https://emuseum.jfk.org/objects/4432/poem-titled-a-crime-revisited" target="_blank" rel="noopener noreferrer">Museum record ↗</a></div>
-    </div>
-    <div class="footer-bottom"><span>Private concept prepared by <a href="https://astraproductions.co/" target="_blank" rel="noopener noreferrer">Astra Productions</a> · © <span id="year">2026</span></span><span>Concept for review only · Book cover, author photograph, poem excerpts and final wording require author approval.</span></div>
-  </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const toggle=document.querySelector('.menu-toggle');
-    const nav=document.querySelector('.nav-links');
-    toggle.addEventListener('click',()=>{const isOpen=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(isOpen));toggle.firstChild.textContent=isOpen?'Close ':'Menu ';});
-    document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.firstChild.textContent='Menu ';}));
-    if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in-view');observer.unobserve(entry.target);}}),{threshold:0.09});document.querySelectorAll('[data-reveal]').forEach(el=>observer.observe(el));}
-    else{document.querySelectorAll('[data-reveal]').forEach(el=>el.classList.add('in-view'));}
-  </script>
+<div class="review"><i></i> A PRIVATE CONCEPT FOR MARK'S REVIEW &mdash; NOT AN OFFICIAL AUTHOR WEBSITE</div>
+<header class="topbar" id="top"><a class="logo" href="#top" aria-label="Mark H. Brookshire homepage"><span class="sig">M.</span><span class="logo-name">Mark H. Brookshire<em>Writing from the life lived</em></span></a><button class="mobile-menu" type="button" aria-label="Toggle navigation" aria-controls="nav" aria-expanded="false">Menu &#9776;</button><nav class="links" id="nav" aria-label="Main navigation"><a href="#story">His story</a><a href="#archive">Dallas &amp; the poem</a><a href="#reflection">His voice</a><a href="#book">The book</a><a href="#book">Find the book &nearr;</a></nav></header>
+<main>
+<section class="hero" aria-labelledby="hero-heading"><div class="hero-grid"><div class="hero-copy"><div class="overline">Mark H. Brookshire &nbsp; / &nbsp; Dallas, Texas</div><h1 id="hero-heading"><span>Thrown</span><span>Out <em>of</em></span><span>Eden.</span></h1><p class="sub">Rhymes of/and Reflection</p><p class="dek">Some things in life can't be neatly explained. So Mark Brookshire does what a poet does: he puts them into words. A collection shaped by work, memory, an American city, and the courage to speak.</p><div class="actions"><a class="button" href="#book">Discover the book <span aria-hidden="true">&#8599;</span></a><a class="underlink" href="#story">Meet the writer &rarr;</a></div></div><div class="hero-art" aria-label="Published cover art from Thrown Out of Eden"><img class="cover" src="assets/official-cover.jpg" alt="Official illustrated cover of Thrown Out of Eden: Rhymes of/and Reflection by Mark H. Brookshire" width="344" height="550"><span class="vertical">WORDS / MEMORY / REFLECTION</span><span class="cover-tag">The published book cover &nbsp; &bull; &nbsp; 2024</span></div><div class="hero-scroll">SCROLL TO MEET THE MAN BEHIND THE WORDS &darr;</div></div></section>
+<div class="chapter" aria-label="Site themes"><div>01 &nbsp; A life of many trades</div><div>02 &nbsp; A poem for Dallas</div><div>03 &nbsp; One unmistakable voice</div></div>
+<section class="opening section" id="story"><div class="narrow"><div class="cap" data-enter>THE FIRST PAGE<br>OF MARK'S STORY<br>&mdash;<br>DALLAS, TEXAS</div><div data-enter><blockquote>Not born into a literary life. <span>Made a writer by living one.</span></blockquote><p class="source">BASED ON MARK'S PUBLISHED AUTHOR BIOGRAPHY</p></div></div></section>
+<section class="roots section" aria-labelledby="story-heading"><div class="narrow"><div class="portrait-wrap" data-enter><div class="portrait" role="img" aria-label="Reserved editorial portrait area awaiting a verified, approved photograph from Mark H. Brookshire"><span class="portrait-stamp">PORTRAIT<br>PENDING</span><div class="initials">M.B.</div><div class="expect">Mark's authentic photograph belongs here.<br>Awaiting his approval.</div></div><div class="portrait-caption"><span>THE PERSON BEHIND THE POET</span><span>DALLAS-BORN</span></div></div><div class="roots-text" data-enter><div class="eyebrow"><b>01</b> The person behind the poems</div><h2 id="story-heading" class="heading">A working man.<br><em>A writer's eye.</em></h2><div class="bodycopy"><p>Born in Dallas and raised in Farmers Branch, Mark H. Brookshire's story isn't one of quiet rooms and perfect desks. It's a life lived in motion: on an oil rig, painting, in construction, and working as a cable technician.</p><p>He describes himself as no hero &mdash; simply someone who has worked, learned, and kept collecting thoughts along the way. A college poetry-contest win was an early signal. Writing stayed with him, even as his jobs changed.</p><p>That contrast is the point. <strong>The hands that did the work also found the words.</strong></p></div><div class="jobline"><p class="lab">The experiences behind the writing</p><div class="jobs"><span>Oil rig deckhand</span><span>Painter</span><span>Construction</span><span>Cable technician</span><span>College poetry contest</span></div></div><p class="smallhint">Biographical details adapted from the published author bio. Mark can refine these words and provide his preferred portrait before the site is made official.</p></div></div></section>
+<section class="archive section" id="archive" aria-labelledby="archive-heading"><div class="narrow archive-grid"><div data-enter><div class="eyebrow"><b>02</b> Dallas &amp; the poem</div><h2 id="archive-heading" class="heading">A city.<br>A wound.<br><em>A voice.</em></h2><div class="bodycopy"><p>Mark was five years old when President John F. Kennedy was assassinated in Dallas in 1963. A quarter-century later, he wrote a poem about the burden that tragedy left on the city and the people who called it home.</p><p>That poem, <em>A Crime Revisited</em> (1988), is documented in the collection of <strong>The Sixth Floor Museum at Dealey Plaza</strong>. A typed copy was displayed in a museum installation in 2005. In 2021, Mark recorded an oral history with the museum.</p><p>It is a rare thread connecting the poet's personal memory to a city's public history.</p></div><a href="https://emuseum.jfk.org/objects/4432/poem-titled-a-crime-revisited" class="museum-link" target="_blank" rel="noopener noreferrer">See the museum collection record <span aria-hidden="true">&#8599;</span></a><div class="museum-facts"><div><strong>1963</strong><span>Dallas remembers</span></div><div><strong>1988</strong><span>Poem written</span></div><div><strong>2005</strong><span>Museum display</span></div><div><strong>2021</strong><span>Oral history</span></div></div></div><div data-enter><div class="arch-sheet"><div class="tag">A DOCUMENTED PIECE OF DALLAS MEMORY</div><h3 class="arch-title">A Crime<br>Revisited</h3><p>Mark Brookshire, 1988</p><p>Written about Dallas and the long aftermath of November 22, 1963.</p><div class="line"></div><div class="arch-bottom"><span>THE SIXTH FLOOR MUSEUM</span><span>COLLECTION RECORD<br>1989.125.0001</span></div></div></div></div><p style="margin:85px auto 0;max-width:1400px;color:#9facb0;font:10px/1.7 var(--mono)">This is an independently created author concept, not affiliated with or endorsed by The Sixth Floor Museum. The archive graphic is editorial artwork, not a reproduction of the original poem.</p></section>
+<section class="reflect section" id="reflection" aria-labelledby="reflection-heading"><div class="narrow"><div data-enter><div class="eyebrow"><b>03</b> His voice in his own words</div><h2 id="reflection-heading" class="heading">Poetry isn't<br><em>decoration.</em></h2><div class="bodycopy"><p>Mark's book description moves from the poets of antiquity to the world's enduring need for a voice that challenges complacency. His subject is not just beauty; it is what words can confront, remember, and make visible.</p></div><blockquote class="reflect-quote">&ldquo;When I wield words, I strike with the might of a sledgehammer!&rdquo;</blockquote><p style="font:9px var(--mono);color:#512e3d;margin-top:20px">&mdash; FROM THE BOOK'S PUBLISHED DESCRIPTION</p></div><div class="mirror-visual" data-enter aria-hidden="true"><div class="mirror"><span class="mirror-word">Words<br>have<br>weight.</span></div><span class="orbit">THE MIRROR MOTIF REFLECTS THE BOOK'S COVER ART</span></div></div></section>
+<section class="bookpanel section" id="book" aria-labelledby="book-heading"><div class="narrow"><div class="book-figure" data-enter><div class="book-sticker">THE ACTUAL COVER</div><img src="assets/official-cover.jpg" width="344" height="550" loading="lazy" alt="Official cover of Mark Brookshire's 2024 poetry collection Thrown Out of Eden"></div><div data-enter><div class="eyebrow"><b>04</b> The collection</div><h2 id="book-heading" class="heading">A book of <em>rhymes</em> &amp; reflections.</h2><div class="bodycopy"><p><em>Thrown Out of Eden: Rhymes of/and Reflection</em> gathers Mark's observations and commentary into poetry. Its introduction insists that silence is no answer to difficult questions &mdash; and that the poet still has a role to play.</p><p>For readers drawn to language with rough edges, history in its bloodstream, and a voice that isn't afraid to be direct.</p></div><div class="book-data"><div><strong>2024</strong><span>Published</span></div><div><strong>80</strong><span>Pages</span></div><div><strong>Austin Macauley</strong><span>Publisher</span></div></div><div class="retail"><a href="https://www.thriftbooks.com/w/thrown-out-of-eden-rhymes-ofand-reflection_mark-h-brookshire/51751963/" target="_blank" rel="noopener noreferrer" class="button">View paperback &#8599;</a><a href="https://www.readings.com.au/product/9781649794253/thrown-out-of-eden--mark-h-brookshire--2024--9781649794253" target="_blank" rel="noopener noreferrer" class="outline-button">View hardback &#8599;</a></div><p style="font:10px/1.7 var(--mono);color:#8c7b76;margin-top:20px">Independent retailer listings. Editions, pricing and availability may vary.</p></div></div></section>
+<section class="ending" aria-labelledby="ending-heading"><div class="eyebrow">THE LAST WORD IS THE READER'S</div><h2 id="ending-heading">Some words<br><em>stay with us.</em></h2><p>There is more to a life than its occupations. And more to a poem than its final line.</p><a href="#book" class="button">Explore Thrown Out of Eden &nbsp;&#8599;</a></section>
+</main>
+<footer class="footer"><div class="row"><div class="name">Mark H. Brookshire</div><p>Complimentary website concept by <a href="https://astraproductions.co/" target="_blank" rel="noopener noreferrer">Astra Productions</a>. For the author's private review; photography and copy subject to author approval.</p><a href="#top" style="font:10px var(--mono)">BACK TO TOP &uarr;</a></div></footer>
+<script>
+(function(){
+  var btn=document.querySelector('.mobile-menu'), nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){var open=nav.classList.toggle('active');btn.setAttribute('aria-expanded',String(open));btn.textContent=open?'Close ×':'Menu ☰';});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('active');btn.setAttribute('aria-expanded','false');btn.textContent='Menu ☰';});});
+  var items=document.querySelectorAll('[data-enter]');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){items.forEach(function(n){n.classList.add('visible');});return;}
+  var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}});},{rootMargin:'0px 0px -30px 0px',threshold:.08});
+  items.forEach(function(el){observer.observe(el);});
+})();
+</script>
 </body>
 </html>
